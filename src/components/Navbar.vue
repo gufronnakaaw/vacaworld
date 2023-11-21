@@ -3,12 +3,12 @@
     <div class="container mx-auto">
       <div class="flex items-center justify-between">
         <img
-          src="/images/vacaworld-logo.svg"
+          src="/logo/vacaworld.svg"
           alt="vacaworld logo"
           class="order-1 sm:order-2"
         />
         <img
-          src="/images/hamburger.svg"
+          src="/icons/icon-hamburger.svg"
           alt="hamburger menu"
           @click="setShowNavbar"
           class="order-2 sm:order-1 lg:hidden cursor-pointer"
@@ -29,7 +29,7 @@
         </div>
         <div class="order-3 hidden sm:block">
           <button
-            class="grow bg-[#eaeaea] py-4 px-8 font-bold text-grey rounded-lg text-sm mx-2"
+            class="grow bg-white border border-[#eee] hover:bg-[#eaeaea] transition py-4 px-8 font-bold text-grey rounded-lg text-sm mx-2"
           >
             Login
           </button>
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div
-      class="fixed bottom-0 right-0 left-0 p-4 bg-white border lg:hidden"
+      class="fixed bottom-0 right-0 left-0 p-4 bg-white border lg:hidden z-50"
       v-if="showNavbar"
     >
       <ul class="flex justify-between">
@@ -107,7 +107,7 @@
         v-if="showMore"
       >
         <button
-          class="grow bg-[#eaeaea] py-4 px-8 font-bold text-grey rounded-lg text-sm"
+          class="grow bg-white border border-[#eee] hover:bg-[#eaeaea] transition py-4 px-8 font-bold text-grey rounded-lg text-sm"
         >
           Login
         </button>

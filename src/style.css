@@ -7,7 +7,7 @@
 @layer base {
   @font-face {
     font-family: 'CircularStd';
-    src: url('/public/fonts/CircularStd-Bold.woff') format('woff');
+    src: url('/fonts/CircularStd-Bold.woff') format('woff');
   }
 
   html {
