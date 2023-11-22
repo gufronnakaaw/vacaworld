@@ -7,7 +7,7 @@
             class="px-8 py-4 border border-[#eee] text-pink flex gap-2 font-bold text-sm rounded-lg mx-auto lg:mx-0 items-center font-circular hover:bg-[#eaeaea] transition"
           >
             Explore the world!
-            <img src="/icons/icon-work.svg" alt="" />
+            <img src="/icons/icon-work.svg" alt="work icon" />
           </button>
           <h1
             class="font-bold text-[40px] md:text-[56px] text-grey leading-tight text-center mt-4 mb-6 lg:text-[69px] lg:text-start font-circular"
@@ -31,15 +31,40 @@
             <button
               class="justify-center items-center py-6 px-8 bg-white border border-[#EEE] rounded-lg text-sm font-bold flex gap-2 hover:bg-[#eaeaea] transition"
             >
-              <img src="/icons/icon-play.svg" alt="" />
+              <img src="/icons/icon-play.svg" alt="play icon" />
               Watch Demo
             </button>
           </div>
         </div>
       </div>
       <div class="col-span-12 lg:col-span-8 order-1 lg:order-2">
-        <img src="/images/hero.png" class="w-full" alt="" />
+        <img src="/images/hero.png" class="w-full" alt="hero image" />
+      </div>
+      <div class="col-span-12 order-3 py-8">
+        <div
+          class="flex justify-center gap-6 sm:gap-7 lg:justify-between flex-wrap"
+        >
+          <div v-for="logo in logos">
+            <img :src="logo.url" class="h-5 sm:h-8" :alt="logo.alt" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      logos: [
+        { url: '/logo/airbnb.svg', alt: 'airbnb logo' },
+        { url: '/logo/booking.svg', alt: 'booking logo' },
+        { url: '/logo/tripadvisor.svg', alt: 'tripadvisor logo' },
+        { url: '/logo/orbitz.svg', alt: 'orbitz logo' },
+        { url: '/logo/expedia.svg', alt: 'expedia logo' },
+      ],
+    };
+  },
+};
+</script>
